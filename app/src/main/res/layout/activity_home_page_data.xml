@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E63F51B5"
+    >
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Here "
+        android:textSize="40dp"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"/>
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        android:ems="10"
+        android:hint="Email"
+        android:layout_below="@id/textView0"
+        android:textColorHint="#FFEB3B"
+        android:textColor="#FFFFFF"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:hint="Password"
+        android:textColorHint="#FFEB3B"
+        android:inputType="textPassword"
+        android:layout_below="@id/email"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:hint="School Name"
+        android:textColorHint="#FFEB3B"
+        android:inputType="textPersonName"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/password"/>
+    <EditText
+        android:id="@+id/grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:hint="Enter Your Grade"
+        android:textColorHint="#FFEB3B"
+        android:inputType="textPersonName"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/school"/>
+
+
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/layer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/grade">
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Register"
+            android:enabled="false"
+            android:padding="15dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/login"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Login"
+            android:padding="15dp"
+            android:enabled="false"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/layer1"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
